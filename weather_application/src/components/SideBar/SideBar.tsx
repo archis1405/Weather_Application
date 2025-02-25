@@ -1,0 +1,9 @@
+function SideBar(){
+    return(
+        <>
+            Sidebar
+        </>
+    )
+}
+
+export default SideBar;
