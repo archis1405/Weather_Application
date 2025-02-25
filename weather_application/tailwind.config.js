@@ -10,7 +10,7 @@ export default {
   plugins: [require('daisyui'),],
 
   daisyui: {
-    themes : ["dark" , "cupcake" , "neon"]
+    themes : ["dark" , "cupcake" , "neon", "pastel"]
   }
 }
 
