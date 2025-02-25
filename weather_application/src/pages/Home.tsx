@@ -1,7 +1,14 @@
+import MainData from "../components/MainData/MainData";
+import SideBar from "../components/SideBar/SideBar";
+
 function Home(){
     return (
         <>
-            Home
+        <div>
+            <SideBar />
+            <MainData />
+        </div>
+            
         </>
     )
 }
