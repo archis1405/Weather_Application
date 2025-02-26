@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import ForecastReducer from './slices/ForecastSlice';
 
 const store = configureStore({
-    reducer: {},
+    reducer: {
+        forecast: ForecastReducer,
+    },
     devTools: true,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
 });

@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import ForeCastData from "../../interfaces/ForeCastData";
+import ForecastDataState from "../../interfaces/ForeCastDataState";
 
-interface ForecastDataState {
-    status: 'default' | 'loading' | 'success' | 'error';
-    data: ForeCastData | undefined;
-}
 
 const initialState : ForecastDataState = {
     status: 'default',
