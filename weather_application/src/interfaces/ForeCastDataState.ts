@@ -1,3 +1,5 @@
+{/* Stores the data for the location related details */}
+
 import ForeCastData from './ForeCastData';
 
 export default interface ForecastDataState {

@@ -1,3 +1,5 @@
+{/* Stores the data for the next 7 day summary */}
+
 import DayForecast from "./DayForeCast";
 import CurrentDayForecast from "./CurrentDayForeCast";
 

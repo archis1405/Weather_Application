@@ -1,3 +1,5 @@
+{/* Stores the data for the today only i.e. stores the data for today only */}
+
 export default interface CurrentDayForecast {
     uv: number,
     wind_kph: number,
