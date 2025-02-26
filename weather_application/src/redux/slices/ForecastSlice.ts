@@ -29,7 +29,7 @@ const forecastSlice = createSlice({
         builder.addCase(fetchData.fulfilled,(state, action) => {
             if(!action.payload)
                 return;
-
+            state.status = 'success';
             console.log("action",action);
         })
         .addCase(fetchData.pending,(state, action) => {
