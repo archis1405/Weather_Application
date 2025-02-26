@@ -32,6 +32,9 @@ const forecastSlice = createSlice({
 
             console.log("action",action);
         })
+        .addCase(fetchData.pending,(state, action) => {
+            state.status = 'loading';
+        })
     }
 });
 
