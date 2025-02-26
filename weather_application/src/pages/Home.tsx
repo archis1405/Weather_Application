@@ -4,13 +4,12 @@ import backgroundImage from "../../../background.jpg";
 
 function Home(){
     return (
-        <div className = "h-[100vh]" style={{backgroundSize: 'cover', backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(${backgroundImage})`}}>
-        <div className="h-[100%] mx-10 py-6 flex flex-row justify-center items-center ">
+        <div className = "min-h-[100vh] mx-8 py-8 flex flex-row justify-center items-stretch " style={{backgroundSize: 'cover', backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(${backgroundImage})`}}>
             <SideBar />
             <MainData />
         </div>
             
-        </div>
+        
     )
 }
 
