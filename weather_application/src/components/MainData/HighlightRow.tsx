@@ -9,7 +9,6 @@ function HighlightRow(){
             <HighLightCard title="UV Index" data="3.8" footer="LOW"/>
             <HighLightCard title="UV Index" data="3.8" footer="LOW"/>
             <HighLightCard title="UV Index" data="3.8" footer="LOW"/>
-            <HighLightCard title="UV Index" data="3.8" footer="LOW"/>
             
         </div>
     )
