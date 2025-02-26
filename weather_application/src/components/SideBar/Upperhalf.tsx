@@ -1,7 +1,12 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import Sunny from "../../assets/sunny.png";
+import { useSelector } from "react-redux";
+import ReduxState from "../../interfaces/ReduxState";
+
 
 function Upperhalf(){
+
+    const currentData = useSelector((state:ReduxState) => state.forecast.data.currentData);
     return(
         <div className= "max-h-[30rem] w-full p-4 flex flex-col justify-center items-start basis-[65%]">
             <div className="flex flex-start w-full mt-8">
@@ -28,7 +33,7 @@ function Upperhalf(){
             <div className="flex flex-col mt-4">
                 {/* The Temparature Data */}
                 <div className= "text-6xl text-black flex  items-start" >
-                    <div>25.4</div>
+                    <div>{currentData.temp_c}</div>
                     <div className="text-4xl mt-1">°C</div>
             </div>
 

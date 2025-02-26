@@ -1,8 +1,13 @@
 import { FaDroplet } from "react-icons/fa6";
 import { FaSun } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import ReduxState from "../../interfaces/ReduxState";
 
 function Lowerhalf(){
+
+    const currentData = useSelector((state:ReduxState) => state.forecast.data.currentData);
+
     return(
         
             <div className="h-[50%] w-full flex flex-col justify-between items-start">
@@ -13,7 +18,7 @@ function Lowerhalf(){
                             <FaSun />
                         </div>
                         <div className="fontsize-sm">
-                            SUNNY
+                            {currentData.condition}
                         </div>
 
                     </div>
@@ -24,7 +29,7 @@ function Lowerhalf(){
                             <FaDroplet />
                         </div>
                         <div className="fontsize-sm">
-                            PRECIPITATION - 10%
+                            PRECIPITATION - {currentData.chance_of_rain}%
                         </div>
                     </div>
                 </div>
