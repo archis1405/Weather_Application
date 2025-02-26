@@ -11,11 +11,7 @@ function WeekRow(){
             <TemparatureCard title="FRIDAY" temperature="26.9°C" image={CloudyDay} />
             <TemparatureCard title="SATURDAY" temperature="28.0°C" image={CloudyDay} />
             <TemparatureCard title="SUNDAY" temperature="31.1°C" image={CloudyDay} />
-
-            
-
-            
-            
+    
         </div>
     )
 }
