@@ -88,7 +88,7 @@ function HighlightRow(){
                            data={currentData.vis_km.toString() || "N/A"} 
                            footer={<span className={getTextColor(visibilityRange())}>{visibilityRange()}</span>} 
             />
-            <HighLightCard title="SUNRISE" 
+            <HighLightCard title="SUNRISE & SUNSET" 
                            data={currentData.sunrise.toString() || "N/A"} 
                            footer={currentData.sunset.toString() || "N/A"}
             />

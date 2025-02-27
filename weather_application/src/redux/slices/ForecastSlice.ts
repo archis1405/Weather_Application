@@ -32,13 +32,14 @@ const initialState : ForecastDataState = {
     },
 }
 
-export const fetchData = createAsyncThunk('data/fetchData', async () => {
+export const fetchData = createAsyncThunk('data/fetchData', async (data:{city :string}) => {
     try{
+        
         console.log(import.meta.env.VITE_API_KEY);
-        const apiUrl = `/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=Kolkata&days=7&aqi=yes`;
-        console.log("API Request URL:", apiUrl);
+        const apiUrl = `/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${data.city}&days=7&aqi=yes`;
+        
         const response = await axiosInstance.get(apiUrl);
-        console.log(response);
+        
         return response.data;
     }
     catch(error){
@@ -97,5 +98,6 @@ const forecastSlice = createSlice({
         })
     }
 });
+
 
 export default forecastSlice.reducer;

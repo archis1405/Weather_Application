@@ -1,5 +1,5 @@
-import Lowerhalf from "./LowerHalf";
-import Upperhalf from "./UpperHalf";
+import Lowerhalf from "./Lowerhalf";
+import Upperhalf from "./Upperhalf";
 
 
 function SideBar(){

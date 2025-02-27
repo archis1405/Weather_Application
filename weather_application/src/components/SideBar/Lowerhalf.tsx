@@ -7,6 +7,7 @@ import ReduxState from "../../interfaces/ReduxState";
 function Lowerhalf(){
 
     const currentData = useSelector((state:ReduxState) => state.forecast.data.currentData);
+    const location = useSelector((state:ReduxState) => state.forecast.data.location);
 
     return(
         
@@ -40,7 +41,7 @@ function Lowerhalf(){
                         <IoLocationSharp />
                     </div>
                     <div className="fontsize-sm">
-                        New-Delhi , New-Delhi , India
+                        {location.region},{location.name},{location.country}
                     </div>
                     
                 </div>
