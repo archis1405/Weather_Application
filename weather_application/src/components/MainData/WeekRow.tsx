@@ -1,16 +1,29 @@
 import TemparatureCard from "../TemperatureCard";
 import CloudyDay from "../../assets/CloudyDay.png"
+import { useSelector } from "react-redux";
+import ReduxState from "../../interfaces/ReduxState";
+
 function WeekRow(){
+    const dayForecast = useSelector((state:ReduxState)=> state.forecast.data.forecast);
+
+    const weekDays: { [key: number]: string } = {
+        0:'Sunday',
+        1:'Monday',
+        2:'Tuesday',
+        3:'Wednesday',
+        4:'Thursday',
+        5:'Friday',
+        6:'Saturday'
+
+    }
     return(
         <div className="w-full px-12 py-2 flex flex-wrap gap-5">
-
-            <TemparatureCard title="MONDAY" temperature="30.4°C" image={CloudyDay} />
-            <TemparatureCard title="TUESDAY" temperature="31.3°C" image={CloudyDay} />
-            <TemparatureCard title="WEDNESDAY" temperature="24.6°C" image={CloudyDay} />
-            <TemparatureCard title="THURSDAY" temperature="34.2°C" image={CloudyDay} />
-            <TemparatureCard title="FRIDAY" temperature="26.9°C" image={CloudyDay} />
-            <TemparatureCard title="SATURDAY" temperature="28.0°C" image={CloudyDay} />
-            <TemparatureCard title="SUNDAY" temperature="31.1°C" image={CloudyDay} />
+            {dayForecast && dayForecast.map((forecast,index) => {
+                
+                    return <TemparatureCard key={forecast.date || index} title={weekDays[(new Date(forecast.date)).getDay()]} temperature={forecast.avgtemp_c.toString()} image={CloudyDay} />
+            })}
+            
+            
     
         </div>
     )

@@ -10,7 +10,7 @@ function TemparatureCard({ temperature, image , title } : { temperature: string,
                 
             </div>
             <div className="text-lg font-semibold">
-                {temperature}
+                {temperature}°C
             </div>
         </div>
     )
