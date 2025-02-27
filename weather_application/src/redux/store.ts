@@ -1,14 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import ForecastReducer from './slices/ForecastSlice';
+import forecastReducer from './slices/ForecastSlice';
+import uiReducer from './slices/UISlice';
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-        forecast: ForecastReducer,
+        forecast: forecastReducer,
+        ui: uiReducer,
     },
-    devTools: true,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
 });
 
+export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 export default store;
